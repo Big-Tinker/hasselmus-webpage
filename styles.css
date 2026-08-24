@@ -485,12 +485,14 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 38px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .pricing-card {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border: var(--border);
   border-radius: 16px;
@@ -544,6 +546,10 @@ h3 {
 
 .pricing-features li:last-child {
   border-bottom: none;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
 }
 
 .popular::before {
