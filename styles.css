@@ -335,10 +335,19 @@ h3 {
   }
 }
 
-/* ---------- Funktioner ---------- */
+/* ---------- Funktioner (mörk sektion) ---------- */
 .features {
   padding: 150px 0 110px;
-  background-color: var(--cream);
+  background-color: var(--dark);
+  border-bottom: var(--border);
+}
+
+.features .section-header h2 {
+  color: white;
+}
+
+.features .section-header p {
+  color: #cfc4e4;
 }
 
 .features-grid {
@@ -352,7 +361,7 @@ h3 {
   background-color: white;
   border: var(--border);
   border-radius: 16px;
-  box-shadow: var(--shadow-hard);
+  box-shadow: 8px 8px 0 var(--primary-bright);
   padding: 56px 30px 32px;
   text-align: left;
   transition: var(--transition);
@@ -368,7 +377,7 @@ h3 {
 
 .features-grid .feature-card:hover {
   transform: rotate(0deg) translateY(-6px);
-  box-shadow: 12px 12px 0 var(--primary);
+  box-shadow: 12px 12px 0 var(--accent);
 }
 
 .feature-number {
@@ -410,67 +419,6 @@ h3 {
 }
 
 .feature-card p {
-  color: var(--gray);
-  font-size: 0.98rem;
-}
-
-/* ---------- USP (mörk sektion) ---------- */
-.usp {
-  padding: 120px 0;
-  background-color: var(--dark);
-  border-top: var(--border);
-  border-bottom: var(--border);
-}
-
-.usp-content {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.usp-title {
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  font-weight: 700;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.usp-description {
-  font-size: 1.2rem;
-  color: #cfc4e4;
-  margin-bottom: 56px;
-}
-
-.usp-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 34px;
-  margin-top: 50px;
-  text-align: left;
-}
-
-.usp-feature {
-  background-color: var(--secondary);
-  border: var(--border);
-  border-radius: 16px;
-  box-shadow: 8px 8px 0 var(--primary-bright);
-  padding: 34px 28px;
-  transition: var(--transition);
-}
-
-.usp-feature:hover {
-  transform: translateY(-6px);
-  box-shadow: 12px 12px 0 var(--accent);
-}
-
-.usp-feature h3 {
-  color: var(--primary-dark);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.usp-feature p {
   color: var(--gray);
   font-size: 0.98rem;
 }
@@ -917,14 +865,12 @@ h3 {
     font-size: 0.9rem;
   }
 
-  .feature-card,
-  .usp-feature,
   .pricing-card,
   .testimonial-card {
     box-shadow: 5px 5px 0 var(--dark);
   }
 
-  .usp-feature {
+  .feature-card {
     box-shadow: 5px 5px 0 var(--primary-bright);
   }
 
