@@ -65,6 +65,7 @@ h3 {
   font-family: var(--font-display);
   line-height: 1.1;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
 }
 
 .section-header {
@@ -220,7 +221,6 @@ h3 {
 }
 
 .hero-content {
-  max-width: 640px;
   position: relative;
   z-index: 1;
 }
@@ -242,7 +242,7 @@ h3 {
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  font-size: clamp(1.85rem, 4.2vw + 0.9rem, 4.4rem);
   font-weight: 900;
   line-height: 1.05;
   margin-bottom: 24px;
@@ -268,7 +268,7 @@ h3 {
 .hero-star {
   position: absolute;
   top: 150px;
-  right: 7%;
+  right: 3%;
   width: clamp(100px, 13vw, 180px);
   color: var(--accent);
   filter: drop-shadow(6px 6px 0 var(--dark));
@@ -872,13 +872,37 @@ h3 {
 
 /* ---------- Responsivt ---------- */
 @media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo,
+  .navigation {
+    text-align: center;
+  }
+
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .navigation ul li {
-    margin-left: 16px;
+    margin: 4px 8px;
   }
 
   .navigation ul li a {
     font-size: 0.78rem;
     letter-spacing: 0.04em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
   .hero {
@@ -920,20 +944,6 @@ h3 {
 }
 
 @media (max-width: 480px) {
-  .header .container {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .navigation ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navigation ul li {
-    margin: 4px 8px;
-  }
-
   .hero {
     padding: 140px 0 90px;
   }
