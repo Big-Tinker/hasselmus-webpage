@@ -1,9 +1,20 @@
-<section class="cta">
+<section class="cta" id="cta">
   <div class="container">
     <h2 class="cta-title">Börja din resa</h2>
     <p class="cta-description">
-      Ange din epost så får du information så snart Hasselmus öppnat portarna.
+      Ange din epost så får du information så snart Hasselmus öppnat portarna
     </p>
-    <a href="#" class="btn btn-primary">Sign me up!</a>
+    <!-- Ange URL:en som formulärdata ska skickas till i action-attributet -->
+    <form class="cta-form" action="#" method="POST">
+      <input
+        type="email"
+        name="email"
+        placeholder="din@epost.se"
+        aria-label="E-postadress"
+        autocomplete="email"
+        required
+      />
+      <button type="submit" class="btn btn-primary">Sign me up!</button>
+    </form>
   </div>
 </section>

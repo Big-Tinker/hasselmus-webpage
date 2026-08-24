@@ -722,6 +722,38 @@ h3 {
   color: #ede4fd;
 }
 
+.cta-form {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.cta-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 24px;
+  border: var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-hard-sm);
+  background-color: white;
+  color: var(--dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.cta-form input::placeholder {
+  color: var(--gray);
+}
+
+.cta-form input:focus {
+  outline: none;
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 var(--dark);
+}
+
 .cta .btn-primary {
   background-color: var(--accent);
   color: var(--dark);
@@ -908,6 +940,10 @@ h3 {
 
   .hero-buttons .btn {
     width: 100%;
+  }
+
+  .cta-form {
+    flex-direction: column;
   }
 
   .kicker {
